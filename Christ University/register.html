@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+
+  <title>About</title>
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+    <script>
+        var email=document.getElementById('email');
+        var number=document.getElementById('number');
+        email.onkeydown=function()
+        {
+        const regex1=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+        const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})(.[a-z]{1,8})$/;
+        if(regex1.test(email.value)||regex2.test(email.value))
+        {
+            span[0].innerText="Your Email is Valid";
+            span[0].style.color="lime";  
+        }
+        else{
+            span[0].innerText="Invalid Email Id";
+            span[0].style.color="red";
+        }}
+        number.onkeydown=function()
+        {
+            const regnum=/^[0-9]{10}$/;
+            if(regnum.test(number.value))
+        {
+            span[1].innerText="Your Number is Valid";
+            span[1].style.color="lime";  
+        }
+        else{
+            span[1].innerText="Invalid Phone Number";
+            span[1].style.color="red";
+        }   
+        }
+    </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Christ University</a></h1>
+      
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html"><b>Home</b></a></li>
+          <li><a class="active" href="about.html"><b>About</b></a></li>
+          <li><a href="department.html"><b>Departments</b></a></li>
+         
+          <li><a href="contact.html"><b>Contact</b></a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Register</h2>
+        
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0 form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+                </div>
+                <div class="form-group mt-3">
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Your Mobile Number" >
+                </div>
+              <div class="form-group mt-3">
+                <input type="password" class="form-control" name="pass1" id="pass1" placeholder="Create Password" >
+              </div>
+              <div class="form-group mt-3">
+                <input type="password" class="form-control" name="pass2" id="pass2" placeholder="Confirm Password" >
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="address" rows="5" placeholder="Address" ></textarea>
+              </div>
+              <div class="my-3"></div>
+              <div class="text-center">
+                  <button type="submit">Register</button>
+              </div>
+              <span></span>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section --><!-- End About Section -->
+
+   
+      
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Christ University</h3>
+            <p>
+              Dharmaram College Post, <br>
+              Hosur Road,<br>
+              Bengaluru - 560029,Karnataka, India <br><br>
+              <strong>Phone:</strong> <a href="tel:+4733378901">+47 333 78 901</a><br>
+              <strong>Email:</strong> <a href="mailto:mail@christuniversity.in">Send mail</a><br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Vision</h4>
+            <p>EXCELLENCE AND SERVICE</p>
+            
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Mission</h4>
+            <p>CHRIST (Deemed to be University)<br>
+              is a nurturing ground for an<br>
+              individual's holistic development to<br>
+              make effective contribution to the<br>
+              society in a dynamic environment.</p>
+            
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+   
+  </footer><!-- End Footer -->
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
