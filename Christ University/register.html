@@ -4,7 +4,7 @@
 <head>
   
 
-  <title>About</title>
+  <title>Register</title>
   
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -17,37 +17,78 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-    <script>
-        var email=document.getElementById('email');
-        var number=document.getElementById('number');
-        email.onkeydown=function()
-        {
-        const regex1=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-        const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.([a-z]{1,8})(.[a-z]{1,8})$/;
-        if(regex1.test(email.value)||regex2.test(email.value))
-        {
-            span[0].innerText="Your Email is Valid";
-            span[0].style.color="lime";  
+  <script>
+      function ValidateEmail() {
+        var validRegex = /^([a-zA-Z0-9]{8,20}@(christuniversity.in))$/;
+        if (document.form1.email.value.match(validRegex)) {
+              alert("Valid email address!");
+              document.form1.email.focus();
+              return true;
+            } else {
+              alert("Invalid email address!");
+              document.form1.email.focus();
+              return false;
+            }
+          }
+      function ValidateNum() {
+        var validnum = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
+        if (document.form1.number.value.match(validnum)){
+          alert("Valid number");
+          document.form1.number.focus();
+          return true;
+        } else {
+          alert("Invalid number");
+          document.form1.number.focus();
+          return false;
         }
-        else{
-            span[0].innerText="Invalid Email Id";
-            span[0].style.color="red";
-        }}
-        number.onkeydown=function()
+      }
+      function ValidateName() {
+        var validName = /(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})/;
+        if (document.form1.name.value.match(validName)) {
+              alert("Valid Name!");
+              document.form1.name.focus();
+              return true;
+            } else {
+              alert("Invalid Name!");
+              document.form1.name.focus();
+              return false;
+            }
+          }
+      function ValidatePass() {
+        var validPass = /(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,})/;
+        if (document.form1.pass1.value.match(validPass)) {
+              alert("Valid Password!");
+              document.form1.pass1.focus();
+              return true;
+            } else {
+              alert("Invalid Password!");
+              document.form1.pass1.focus();
+              return false;
+            }
+          }
+      function matchPassword() {  
+        var pw1 = document.getElementById("pass1").value;  
+        var pw2 = document.getElementById("pass2").value;  
+        if(pw1 != pw2)  
+        {   
+          alert("Passwords did not match");  
+        } else {  
+          alert("Password created successfully");  
+        }  
+      }  
+    
+    function buttonState(){
+        if(ValidateEmail()  && ValidateName() && ValidateNum() && ValidatePass() && matchPassword() )
         {
-            const regnum=/^[0-9]{10}$/;
-            if(regnum.test(number.value))
+            return true
+        }
+        else
         {
-            span[1].innerText="Your Number is Valid";
-            span[1].style.color="lime";  
+            return false
         }
-        else{
-            span[1].innerText="Invalid Phone Number";
-            span[1].style.color="red";
-        }   
-        }
-    </script>
+    }
+    
+  </script>
 </head>
 
 <body>
@@ -62,7 +103,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html"><b>Home</b></a></li>
-          <li><a class="active" href="about.html"><b>About</b></a></li>
+          <li><a href="about.html"><b>About</b></a></li>
           <li><a href="department.html"><b>Departments</b></a></li>
          
           <li><a href="contact.html"><b>Contact</b></a></li>
@@ -91,31 +132,33 @@
         <div class="row">
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="">
+            <form name="form1" action="#">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+                  <input type="text" name="name" class="form-control"  id="name" placeholder="Your Name"  >
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0 form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+                  <input type="email"  class="form-control" name="email" id="email" placeholder="Your Email"  >
+                  <span></span>
                 </div>
                 <div class="form-group mt-3">
-                    <input type="number" class="form-control" name="number" id="number" placeholder="Your Mobile Number" >
+                    <input type="number" class="form-control"  name="number" id="number" placeholder="Your Mobile Number" maxlength="10"  >
+                    <span></span>
                 </div>
               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="pass1" id="pass1" placeholder="Create Password" >
+                <input type="password" class="form-control" name="pass1" id="pass1" placeholder="Create Password"  >
               </div>
               <div class="form-group mt-3">
-                <input type="password" class="form-control" name="pass2" id="pass2" placeholder="Confirm Password" >
+                <input type="password" class="form-control"  name="pass2" id="pass2" placeholder="Confirm Password" >
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="address" rows="5" placeholder="Address" ></textarea>
+                <textarea  name="address" class="form-control" rows="5" placeholder="Address" ></textarea>
               </div>
               <div class="my-3"></div>
               <div class="text-center">
-                  <button type="submit">Register</button>
+                  <button type="submit" onclick="buttonState()" class="btn btn-outline-success">
+                  Register</button>
               </div>
-              <span></span>
             </form>
 
           </div>
