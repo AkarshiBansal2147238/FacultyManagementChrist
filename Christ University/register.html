@@ -18,6 +18,14 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <script>
+    function test(event)
+        {
+            let code=event.which;
+            if(code>47&&code<58)
+            return false;
+            else
+            return true;
+        }
       function ValidateEmail() {
         var validRegex = /^([a-zA-Z0-9]{8,20}@(christuniversity.in))$/;
         if (document.form1.email.value.match(validRegex)) {
@@ -135,7 +143,7 @@
             <form name="form1" action="#">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control"  id="name" placeholder="Your Name"  >
+                  <input type="text" name="name" class="form-control"  id="name" placeholder="Your Name" onkeypress="return test(event)"  >
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0 form-group mt-3">
                   <input type="email"  class="form-control" name="email" id="email" placeholder="Your Email"  >
