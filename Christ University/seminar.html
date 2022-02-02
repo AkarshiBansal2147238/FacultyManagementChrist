@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myapp">
 
 <head>
- 
-  <title>Faculty Details</title>
   
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="jsondemo.js"></script>
+  <title>Seminars</title>
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -18,10 +19,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
- 
+  
 </head>
 
-<body>
+<body ng-controller="myctrl">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
@@ -35,106 +36,82 @@
           <li><a href="index.html"><b>Home</b></a></li>
           <li><a href="about.html"><b>About</b></a></li>
           <li><a href="department.html"><b>Departments</b></a></li>
+         
           <li><a href="contact.html"><b>Contact</b></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-     
+      
 
     </div>
   </header><!-- End Header -->
 
   <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
-        <h2><b>Faculty Details</b></h2>
+        <h2>Seminars</h2>
         
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Cource Details Section ======= -->
-    <section id="course-details" class="course-details">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-8">
-            <img src="assets/img/course-details.jpg" class="img-fluid" alt="">
-            <h3>Dr ABHIJIT PAUL</h3>
+        <div class="row" style="overflow: scroll;">
+            <table cellpadding="10" cellspacing="10" border="2" width="100%" style="scroll-behavior: auto;">
+                <tr>
+                    <th>S_No
+                        <br>
+                        <input type="text" ng-model="search.id">
+                    </th>
+                    <th>Type of program
+                        <br>
+                        <input type="text" ng-model="search.Type">
+                    </th>
+                    <th>Role
+                        <br>
+                        <input type="text" ng-model="search.Role">
+                    </th>
+                    <th>Name of Program
+                        <br>
+                        <input type="text" ng-model="search.Name">
+                    </th>
+                    <th>Title of Paper
+                        <br>
+                        <input type="text" ng-model="search.Title">
+                    </th>
+                    <th>Date
+                        <br>
+                        <input type="text" ng-model="search.Date">
+                    </th>
+                    <th>Level
+                        <br>
+                        <input type="text" ng-model="search.Level">
+                    </th>
+                </tr>
+                <tr ng-repeat="item in names|filter:search">
+                    <td>{{item.id}}</td>
+                    <td>{{item.Type|toUpperCase}}</td>
+                    <td>{{item.Role|myFormat}}</td>
+                    <td>{{item.Name}}</td>
+                    <td>{{item.Title}}</td>
+                    <td>{{item.Date}}</td>
+                    <td>{{item.Level}}</td>
+                </tr>
+            </table>
+
             
-          </div>
-          <div class="col-lg-4">
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Designation</h5>
-              <p><a href="#">ASSOCIATE PROFESSOR</a></p>
-            </div>
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Program</h5>
-              <p>COMPUTER SCIENCE</p>
-            </div>
-
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Department</h5>
-              <p>SCHOOL OF SCIENCES</p>
-            </div>
-            <div class="course-info d-flex justify-content-between align-items-center">
-              <h5>Experience</h5>
-              <p>10 yrs</p>
-            </div>
-           
-
-          </div>
         </div>
 
       </div>
-    </section><!-- End Cource Details Section -->
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2>Our Achievements</h2>
-      </div>
+    </section><!-- End About Section --><!-- End About Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-      <div class="container">
+   
+      
 
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Articles in Periocials</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Articles in Journals</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Participation in seminars and conferences</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Research Projects</p>
-          </div>
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Workshops and Training Programs</p>
-          </div>
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Awards and Achievements</p>
-          </div>
-        </div>
-        <a href = "experience.html" class="btn btn-outline-success" role="button" >Experience</a>
-        <a href = "seminar.html" class="btn btn-outline-success" role="button" >Seminars</a>
-      </div>
-    </section><!-- End Counts Section -->
 
   </main><!-- End #main -->
 
@@ -180,9 +157,6 @@
 
    
   </footer><!-- End Footer -->
-
-  
-
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>

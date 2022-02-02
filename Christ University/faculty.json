@@ -1,0 +1,9 @@
+{"records":[
+    {"id":"1","Type":"Conference","Role":"Presenter","Name":"Cities Under Restoration","Title":"The use of urban science for the study of historic cities and future development","Date":"26/11/2018","Level":"International"},
+    {"id":"2","Type":"Seminar","Role":"Presenter","Name":"Institutional seminar","Title":"The use of urban configurational science in constructing the common ground of urban development","Date":"10/08/2018","Level":"Institutional"},
+    {"id":"3","Type":"Conference","Role":"Presenter","Name":"Transforming into Smart Cities","Title":"Can a physical city become a human city?","Date":"14/11/2014","Level":"International"},
+    {"id":"4","Type":"Symposium","Role":"Presenter","Name":"International Symposium on Megacities for Sustainable Development in the Context of Global Urbanization","Title":"Look at your past: It was sustainable","Date":"11/11/2014","Level":"International"},
+    {"id":"5","Type":"Seminar","Role":"Presenter","Name":"Seminar on Urban Ecology","Title":"Aquaculture in artificially developed wetlands in urban areas: an application of the bivariate relationship between soil and surface water in landscape ecology","Date":"23/07/2011","Level":"National"},
+    {"id":"6","Type":"Seminar","Role":"Presenter","Name":"Seminar on Future India","Title":"The Role of Kinetic Architecture","Date":"18/09/1999","Level":"National"}
+]
+}
