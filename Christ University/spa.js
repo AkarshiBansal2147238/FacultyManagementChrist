@@ -1,0 +1,47 @@
+angular.module('myapp',['ngRoute'])
+.config(function($routeProvider)
+{
+    $routeProvider.when('/logindis',
+    {
+        templateUrl:'/logindis.html',
+        controller:'logindisctrl'}).when('/logindis/:first/:last',
+        {
+            templateUrl:'/logindis.html',
+            controller:'logindisctrl'
+    }).when('/forgot',
+    {
+        templateUrl:'/forgot.html',
+        controller:'forgotctrl'
+    }).when('/suggest',
+    {
+        templateUrl:'/suggest.html',
+        controller:'suggestctrl'
+    })
+})
+.controller('myctrl',function()
+{
+
+})
+.controller("logindisctrl",function($scope,$routeParams)
+{
+    $scope.message="Login Successful"
+    if($routeParams.first&&$routeParams.last)
+    {
+        $scope.person={
+            first:$routeParams.first,
+            last:$routeParams.last
+        };
+    }
+})
+.controller("forgotctrl",function($scope)
+{
+   $scope.questions=["Favourite Color","Pet Name","Name of Childhood Friend"]; 
+})
+.controller("suggestctrl",function($scope,$http)
+{
+    $http.get('pass.json')
+    .success(function(response)
+    {
+        $scope.Passwords=response.records;
+    });
+});

@@ -29,3 +29,9 @@ myapp.filter('myFormat', function() {
       return txt;
     }
 });
+myapp.filter('makecapital', function() {
+    return function(input) 
+    {
+      return input.substring(0,1).toUpperCase()+input.substring(1,undefined).toLowerCase();
+    }
+});
