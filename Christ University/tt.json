@@ -1,0 +1,9 @@
+{"records":[
+    {"day":"Monday","L1":"DBT","L2":"WSD","L3":"Linux","L4":"--","L5":"WSD","L6":"--"},
+    {"day":"Tuesday","L1":"DBT","L2":"--","L3":"Linux","L4":"WSD","L5":"WSD","L6":"--"},
+    {"day":"Wednesday","L1":"DBT","L2":"WSD","L3":"Linux","L4":"WSD","L5":"--","L6":"--"},
+    {"day":"Thursday","L1":"DBT","L2":"WSD","L3":"Linux","L4":"--","L5":"--","L6":"WSD"},
+    {"day":"Friday","L1":"DBT","L2":"WSD","L3":"Linux","L4":"--","L5":"WSD","L6":"--"},
+    {"day":"Saturday","L1":"DBT","L2":"WSD","L3":"--","L4":"--","L5":"--","L6":"--"}
+]
+}
